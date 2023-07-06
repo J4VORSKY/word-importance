@@ -8,7 +8,7 @@ EMB=512
 SAVE_PATH=models
 
 MODEL=$LAYERS-l.$HEADS-h.$FFN-ffn.$EMB-emb.nli
-DATA_PATH=data
+DATA_PATH=data/msq-nli
 
 mkdir -p $SAVE_PATH/$MODEL
 
@@ -26,7 +26,7 @@ CUDA_LAUNCH_BLOCKING=1 fairseq-train $DATA_PATH \
   --encoder-embed-dim $EMB \
   --encoder-layers $LAYERS \
   --optimizer adam \
-  --max-tokens 32768  \
+  --max-tokens 65536  \
   --validate-interval-updates 200 \
   --adam-betas '(0.90, 0.98)' \
   --clip-norm 0.0 \
@@ -42,8 +42,7 @@ CUDA_LAUNCH_BLOCKING=1 fairseq-train $DATA_PATH \
   --keep-best-checkpoints 1 \
   --best-checkpoint-metric acc \
   --maximize-best-checkpoint-metric \
-  --max-update 3000000 \
-  --max-epoch 1000 \
+  --max-epoch 6 \
   --num-workers 5 \
   --skip-invalid-size-inputs-valid-test \
   --fp16
