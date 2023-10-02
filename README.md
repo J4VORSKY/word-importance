@@ -278,5 +278,19 @@ From the [udpipe web service](https://lindat.mff.cuni.cz/services/udpipe/):
 ## CREDITS
 
 ```
-TBA
+@inproceedings{javorsky-etal-2023-assessing,
+    title = "Assessing Word Importance Using Models Trained for Semantic Tasks",
+    author = "Javorsk{\'y}, D{\'a}vid  and
+      Bojar, Ond{\v{r}}ej  and
+      Yvon, Fran{\c{c}}ois",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.563",
+    doi = "10.18653/v1/2023.findings-acl.563",
+    pages = "8846--8856",
+    abstract = "Many NLP tasks require to automatically identify the most significant words in a text. In this work, we derive word significance from models trained to solve semantic task: Natural Language Inference and Paraphrase Identification. Using an attribution method aimed to explain the predictions of these models, we derive importance scores for each input token. We evaluate their relevance using a so-called cross-task evaluation: Analyzing the performance of one model on an input masked according to the other model{'}s weight, we show that our method is robust with respect to the choice of the initial task. Additionally, we investigate the scores from the syntax point of view and observe interesting patterns, e.g. words closer to the root of a syntactic tree receive higher importance scores. Altogether, these observations suggest that our method can be used to identify important words in sentences without any explicit word importance labeling in training.",
+}
 ```
