@@ -82,6 +82,10 @@ class SentimentClassificationSST(pl.LightningModule):
     def __init__(self, hparams):
         super().__init__()
         self.hparams = hparams
+        
+        # This is a hack to make it work with the current setup
+        if self.hparams.dictionary.split("/")[1] == "data-msq-tok": 
+            self.hparams.dictionary = "./data/msq-nli/processed/dict.input.txt"
 
         self.tokenizer = Dictionary.load(hparams.dictionary)
 
