@@ -129,6 +129,10 @@ pip install torch==1.6.0
 
 # Tools
 
+## Interactive Gradio App
+
+Install gradio (`pip install gradio`) and run `python gradio_example.py` and test the models using an interactive web-based application.
+
 ## NLI
 
 ### Preprocessing
